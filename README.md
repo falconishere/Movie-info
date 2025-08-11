@@ -58,3 +58,10 @@ images/ # Cast, crew, and platform logos
 - **Public Image Sources** – Wikimedia Commons and other open repositories for cast and crew photos.
 - **YouTube** – Embedded trailer for enhanced interactivity.
 - **Christ University** – For providing the UI/UX course framework that inspired this project.
+
+---
+## 👥 Contributors
+- Abhishan Francis
+- Abel Alexader
+- Misheal Julian
+---
