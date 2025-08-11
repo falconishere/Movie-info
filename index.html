@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tropic Thunder - Movie Info</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for star ratings -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f1f8e9; /* Light green background */
+            color: #333;
+        }
+
+        .font-main-title {
+            font-family: 'Graduate', serif;
+            color: #f5deb3;
+            text-transform: uppercase;
+            text-shadow: 
+                0px 2px 2px #a52a2a,
+                0px 8px 10px rgba(0,0,0,0.5);
+        }
+        
+        .font-heading {
+            font-family: 'Graduate', serif;
+            letter-spacing: 1px;
+        }
+
+        .banner-section {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("https://imgs.search.brave.com/9lSNZ8WtQCrMjDOkCo1ms-y9iERQwWkSV7UFhCZXJbg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuanVzdHdhdGNo/LmNvbS9iYWNrZHJv/cC8yODAyNjMyNTgv/czY0MC90cm9waWMt/dGh1bmRlcg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300;
+        }
+
+        .card:hover {
+            @apply transform -translate-y-1 shadow-xl;
+        }
+        
+        .cast-card-image {
+            height: 280px;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .section-title {
+            @apply font-heading text-5xl md:text-6xl text-green-700 mb-8 text-center;
+        }
+        
+        .review-card {
+             @apply bg-white border-l-4 border-green-500;
+        }
+
+        .star-rating .fa-star.checked {
+            color: #ff9800;
+        }
+        
+        .trailer-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .trailer-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .trivia-list li {
+            @apply flex items-start p-4;
+        }
+        .trivia-list .fa-star {
+            @apply text-yellow-500 text-lg mt-1 mr-3;
+        }
+
+    </style>
+</head>
+<body class="bg-green-50">
+
+    <!-- Header -->
+    <header class="banner-section h-screen flex items-center justify-center text-center text-white p-4">
+        <div>
+            <h1 class="font-main-title text-8xl md:text-9xl">Tropic Thunder</h1>
+            <p class="font-bold text-2xl md:text-3xl mt-4 bg-black bg-opacity-50 px-4 py-2 rounded-md">
+                <span>Action / Comedy</span> | <span>2008</span>
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+
+        <!-- Synopsis -->
+        <section id="synopsis" class="mb-24">
+            <h2 class="section-title">Synopsis</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md text-gray-700 text-lg leading-relaxed space-y-4 max-w-4xl mx-auto">
+                <p>
+                    A group of self-absorbed actors set out to make the most expensive war movie ever. When their frustrated director drops them in a real jungle to capture their "raw" performances, they must rely on their acting skills to survive very real dangers.
+                </p>
+                <p>
+                    The cast, including a committed method actor and a potty-mouthed comedian, stumble into a drug-running gang's territory. What starts as a film production quickly becomes a mission of survival, blurring the lines between fiction and reality in the most explosive ways.
+                </p>
+            </div>
+        </section>
+
+        <!-- Cast -->
+        <section id="cast" class="mb-24">
+            <h2 class="section-title">Cast</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 md:gap-8">
+                <div class="card text-center">
+                    <img src="https://imgs.search.brave.com/I5mvCigQyWDY-b3P9oFRm6FyfYv5eXF4WymdYQ6FOGs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi81LzU2L0Jl/bl9TdGlsbGVyX2F0/X3RoZV8yMDI0X1Rv/cm9udG9fSW50ZXJu/YXRpb25hbF9GaWxt/X0Zlc3RpdmFsXyUy/OGNyb3BwZWQlMjku/anBnLzUxMnB4LUJl/bl9TdGlsbGVyX2F0/X3RoZV8yMDI0X1Rv/cm9udG9fSW50ZXJu/YXRpb25hbF9GaWxt/X0Zlc3RpdmFsXyUy/OGNyb3BwZWQlMjku/anBn" alt="Ben Stiller" class="cast-card-image">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800">Ben Stiller</h3>
+                        <p class="text-green-600 font-semibold">as Tugg Speedman</p>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Robert_Downey_Jr._2014_Comic-Con.jpg/500px-Robert_Downey_Jr._2014_Comic-Con.jpg" alt="Robert Downey Jr." class="cast-card-image">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800">Robert Downey Jr.</h3>
+                        <p class="text-green-600 font-semibold">as Kirk Lazarus</p>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <img src="https://imgs.search.brave.com/fJEsDnXfyF8ziaESkKdieLzeDXZCdhL4r6RdfKwA740/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi85LzkyL1Rl/bmFjaW91c0RPMjE2/MDYyM18lMjgzOF9v/Zl82MiUyOV9KYWNr/X0JsYWNrLmpwZy81/MTJweC1UZW5hY2lv/dXNETzIxNjA2MjNf/JTI4Mzhfb2ZfNjIl/MjlfSmFja19CbGFj/ay5qcGc" alt="Jack Black" class="cast-card-image">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800">Jack Black</h3>
+                        <p class="text-green-600 font-semibold">as Jeff Portnoy</p>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <img src="https://imgs.search.brave.com/JB79zJpNJAmIuXx3jRlENe-Dl7t34EIRONaSAXV2cbA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi83LzdmL0ph/eV9CYXJ1Y2hlbF9K/b2ludF9CYXNlX01j/R3VpcmUtRGl4LUxh/a2VodXJzdF8yMDE0/X2Nyb3AuanBnLzUx/MnB4LUpheV9CYXJ1/Y2hlbF9Kb2ludF9C/YXNlX01jR3VpcmUt/RGl4LUxha2VodXJz/dF8yMDE0X2Nyb3Au/anBn" alt="Jay Baruchel" class="cast-card-image">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800">Jay Baruchel</h3>
+                        <p class="text-green-600 font-semibold">as Kevin Sandusky</p>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <img src="https://imgs.search.brave.com/Yood0XvzIKf3LI1QW1Ozk1sYBypsf8_HyxzqefgSTzo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YWNlc2hvd2Jpei5j/b20vaW1hZ2VzL3Bo/b3RvL2JyYW5kb25f/dF9qYWNrc29uLmpw/Zw" alt="Brandon T. Jackson" class="cast-card-image">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800">Brandon T. Jackson</h3>
+                        <p class="text-green-600 font-semibold">as Alpa Chino</p>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <img src="https://imgs.search.brave.com/BsDmeyhwWoHtnPjslIp1eeEzizFRsLElG9oDvk7WHGo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9iL2JmL01h/dHRoZXdfTWNDb25h/dWdoZXlfMjAxOV8l/Mjg0ODY0ODM0NDc3/MiUyOS5qcGcvNTEy/cHgtTWF0dGhld19N/Y0NvbmF1Z2hleV8y/MDE5XyUyODQ4NjQ4/MzQ0NzcyJTI5Lmpw/Zw" alt="Matthew McConaughey" class="cast-card-image">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800">Matthew McConaughey</h3>
+                        <p class="text-green-600 font-semibold">as Rick Peck</p>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <img src="https://imgs.search.brave.com/lFLiHTjl29sI4i71P-Td4SrRabYnuU5DIOfx4M8dpkk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YXByb3h5LnR2dHJv/cGVzLm9yZy93aWR0/aC8xMjAwL2h0dHBz/Oi8vc3RhdGljLnR2/dHJvcGVzLm9yZy9w/bXdpa2kvcHViL2lt/YWdlcy90b21jcnVp/c2VfOC5wbmc" alt="Tom Cruise" class="cast-card-image">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800">Tom Cruise</h3>
+                        <p class="text-green-600 font-semibold">as Les Grossman</p>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Bill_Hader_%2829419489470%29_%28cropped%29.jpg" alt="Bill Hader" class="cast-card-image">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800">Bill Hader</h3>
+                        <p class="text-green-600 font-semibold">as Rob Slolom</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Crew -->
+        <section id="crew" class="mb-24">
+            <h2 class="section-title">Crew</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto text-center">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-lg font-bold text-gray-800">Ben Stiller</h3>
+                    <p class="text-green-600 font-semibold">Director</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-lg font-bold text-gray-800">Justin Theroux</h3>
+                    <p class="text-green-600 font-semibold">Writer</p>
+                </div>
+                 <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-lg font-bold text-gray-800">John Toll</h3>
+                    <p class="text-green-600 font-semibold">Cinematographer</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-lg font-bold text-gray-800">Theodore Shapiro</h3>
+                    <p class="text-green-600 font-semibold">Music</p>
+                </div>
+                 <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-lg font-bold text-gray-800">Greg Hayden</h3>
+                    <p class="text-green-600 font-semibold">Editor</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-lg font-bold text-gray-800">Marlene Stewart</h3>
+                    <p class="text-green-600 font-semibold">Costume Design</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-lg font-bold text-gray-800">Jeff Mann</h3>
+                    <p class="text-green-600 font-semibold">Production Design</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-lg font-bold text-gray-800">Felicity Bowring</h3>
+                    <p class="text-green-600 font-semibold">Makeup Artist</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Stuff -->
+        <section id="fun-stuff" class="mb-24">
+            <h2 class="section-title">Fun Stuff</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+                <div>
+                    <h3 class="font-heading text-3xl text-gray-700 mb-4">Official Trailer</h3>
+                    <div class="trailer-container">
+                        <iframe src="https://www.youtube.com/embed/T-6YhRZowgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-heading text-3xl text-gray-700 mb-4">Did You Know?</h3>
+                    <ul class="trivia-list space-y-2 text-gray-700">
+                        <li><i class="fas fa-star"></i>Tom Cruise's role as Les Grossman was his idea, including the bald cap and bizarre dance moves.</li>
+                        <li><i class="fas fa-star"></i>Robert Downey Jr. stayed in character as Kirk Lazarus even between takes.</li>
+                        <li><i class="fas fa-star"></i>The opening napalm explosion is one of the largest practical explosions ever in a comedy.</li>
+                        <li><i class="fas fa-star"></i>Ben Stiller got the idea for the movie while filming "Empire of the Sun" in 1987.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section id="reviews" class="mb-24">
+            <h2 class="section-title">Reviews</h2>
+            <div class="space-y-8 max-w-4xl mx-auto">
+                <div class="card review-card p-6">
+                    <div class="flex items-start">
+                        <img src="https://imgs.search.brave.com/O28iWemiZ1qxIJL3U8pk5iwV8Du5y00C7lRpc9H6xLw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5tdWNrcmFjay5j/b20vZ3JvdXBzL2lj/b25zL2NpbmVtYWJs/ZW5kLmpwZWc" alt="Reviewer 1" class="w-16 h-16 rounded-full mr-4 border-2 border-orange-400">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-bold text-xl text-gray-800">CinemaBlend</h3>
+                                <div class="star-rating text-lg">
+                                    <i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mt-2">"A hilarious, brilliantly satirical take on Hollywood, war movies, and method acting. Robert Downey Jr. is a revelation."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card review-card p-6">
+                    <div class="flex items-start">
+                        <img src="https://imgs.search.brave.com/jLl4xOedbvyI76HFPiGieRbhYgyvQkDIbMxHlrpABuU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzczLzI4/L2QyLzczMjhkMjFm/NDQ1ZGFhYzg2NDJi/N2E5MDJhNTg2ZGY0/LmpwZw" alt="Reviewer 2" class="w-16 h-16 rounded-full mr-4 border-2 border-green-400">
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-bold text-xl text-gray-800">Rolling Stone</h3>
+                                <div class="star-rating text-lg">
+                                    <i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i><i class="fa fa-star checked"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mt-2">"Outrageously funny and surprisingly clever. It's a comedy that fires on all cylinders and never lets up."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Where to Watch -->
+        <section id="watch">
+             <h2 class="section-title">Where to Watch</h2>
+             <div class="flex justify-center items-center space-x-6 md:space-x-10">
+                <img src="https://imgs.search.brave.com/pB7rmF0nJIRrC9TeIkUEjCoOrOx8oh-ZcEy8Qci1QgA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODBiNTdmY2Q5OTk2/ZTI0YmM0M2M1Mjku/cG5n" alt="Netflix Logo" class="h-12 md:h-16 opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://imgs.search.brave.com/ZcAqlPXP6VM6fH48kiUZVlDLZ42CctsIg2R72Lh8QC0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YXBsYXluZXdzLmIt/Y2RuLm5ldC93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxOC8wNC9Q/cmltZS1WaWRlby1T/dGFja2VkLmpwZw" alt="Amazon Prime Video Logo" class="h-12 md:h-16 opacity-70 hover:opacity-100 transition-opacity">
+                <img src="https://imgs.search.brave.com/X7CSRX1odhAKxQlfzeJd3Zgb7EBWuQzvxUV2TNSaDkY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly8xMDAw/bG9nb3MubmV0L3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIyLzAy/L0FwcGxlLVRWLUlP/Uy1sb2dvLTUwMHgy/ODEuanBn" alt="Apple TV Logo" class="h-12 md:h-16 opacity-70 hover:opacity-100 transition-opacity">
+             </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-20">
+        <div class="container mx-auto py-6 px-4 text-center text-gray-300">
+            <p>&copy; 2008 DreamWorks Pictures. All Rights Reserved.</p>
+            <p class="text-sm mt-2 text-gray-400">This page is a student project for educational purposes.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
