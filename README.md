@@ -6,7 +6,7 @@ It is built using **HTML5** and **Tailwind CSS**, with embedded multimedia and r
 
 ---
 ## 🔗 View My Website
-[**🌐 Click here to view the live site**](https://yourusername.github.io/tropic-thunder-website/)
+[**🌐 Click here to view the live site**](https://falconishere.github.io/Movie-info/)
 
 ---
 
